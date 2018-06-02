@@ -12,7 +12,8 @@ $(document).ready(function() {
             directions: $("#directions").val().trim(),
             description: $("#description").val().trim(),
             category: $("#category").val().trim(),
-            keywords: keywords
+            keywords: keywords,
+            username: $("#chef").val().trim()
         }
 
         $.ajax("/api/recipes", {
@@ -29,6 +30,7 @@ $(document).ready(function() {
 
     $("#searchSubmitButton").on("click", function(event) {
         event.preventDefault()
+
         var searchQuery = {
             category: $("#search-category").val(),
             search: $("#search-box").val().trim()
@@ -38,7 +40,6 @@ $(document).ready(function() {
         // console.log(searchQuery.category)
         // $.ajax("/api/recipes/" + searchQuery.category + "/" + searchQuery.search, {
         //     type: "GET",
-        //     data: searchQuery
         //     }).then(
         //     function() {
         //         console.log("new search query");

@@ -116,7 +116,14 @@
                             <option value="keyword">keyword</option>
                         </select>
                         <br>
-                        <input type="text" id="search-box" class="form-control" placeholder="Search">
+                        <!-- <input type="text" id="search-box" class="form-control" placeholder="Search"> -->
+                        <select class="form-control" id="search-options" type="text" placeholder="Select Category">
+                            <option>Appetizers</option> 
+                            <option>Desserts</option>
+                            <option>Pasta</option>
+                            <option>Salads</option> 
+                            <option>Entrees</option>
+                        </select>
                         <br>
                         <button type="submit" class="btn btn-lg btn-block mb-2" id="searchSubmitButton"><span style="color:white">Submit</span></button>
                     </form>  
@@ -144,11 +151,11 @@
 
                         <label class="accent" for="category">Category</label>
                         <select class="form-control" id="category" type="text" placeholder="Select Category">
-                        <option>Appetizers</option>
-                        <option>Desserts</option>
-                        <option>Pasta</option>
-                        <option>Salads</option>
-                        <option>Entrees</option>
+                            <option>Appetizers</option>
+                            <option>Desserts</option>
+                            <option>Pasta</option>
+                            <option>Salads</option>
+                            <option>Entrees</option>
                         </select>
 
                         <label class="accent" for="chef">Chef</label>
@@ -186,13 +193,19 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src=""></script>
-<!-- <script>
-    $("#collapsible-form").hide()
+<script>
+    // $("#collapsible-form").hide()
     $("#searchButton").on("click", function(){
-        $("form").toggle()
-        $("#postButton").toggle()
-        $("#welcome-p").toggle()
-        $("#searchButton").hide()
+        // $("form").toggle()
+        // $("#postButton").toggle()
+        // $("#welcome-p").toggle()
+        // $("#searchButton").hide()
+
+        // if(!$("#search-category").val() == "category") {
+        //     $("#search-box").replaceWith('<select class="form-control" id="#search-category" type="text" placeholder="Select Category"> <option>Appetizers</option> <option>Desserts</option> <option>Pasta</option> <option>Salads</option> <option>Entrees</option> </select>')
+        // }
+
+        $("#search-options")        
     })
-</script> -->
+</script>
 </html>
